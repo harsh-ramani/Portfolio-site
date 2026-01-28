@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsh Ramani | Multi-Domain Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Inter:wght@400;700;900&display=swap');
+        
+        :root {
+            --theme-primary: #00f3ff;
+            --theme-secondary: #ff00ff;
+            --dark-bg: #050505;
+        }
+
+        /* Domain Themes */
+        .theme-cyber { --theme-primary: #39ff14; --theme-secondary: #ff003c; }
+        .theme-data { --theme-primary: #0088ff; --theme-secondary: #e0e0e0; }
+        .theme-ai { --theme-primary: #bc13fe; --theme-secondary: #00f3ff; }
+
+        body { 
+            background-color: var(--dark-bg);
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            margin: 0;
+            transition: background 0.5s ease;
+        }
+
+        .mono { font-family: 'Fira Code', monospace; }
+
+        .grid-bg {
+            background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .neon-border {
+            border: 1px solid rgba(var(--theme-primary-rgb), 0.3);
+            box-shadow: 0 0 10px rgba(var(--theme-primary-rgb), 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .text-primary { color: var(--theme-primary); }
+        .border-primary { border-color: var(--theme-primary); }
+        .bg-primary { background-color: var(--theme-primary); }
+        .text-secondary { color: var(--theme-secondary); }
+
+        .cyber-btn {
+            background: transparent;
+            border: 1px solid var(--theme-primary);
+            color: var(--theme-primary);
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .cyber-btn:hover {
+            background: var(--theme-primary);
+            color: black;
+            box-shadow: 0 0 20px var(--theme-primary);
+        }
+
+        .tab-active {
+            border-bottom: 2px solid var(--theme-primary);
+            color: var(--theme-primary);
+            background: rgba(var(--theme-primary-rgb), 0.1);
+        }
+
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%);
+            z-index: 100;
+            background-size: 100% 4px;
+            pointer-events: none;
+        }
+
+        html { scroll-behavior: smooth; }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="grid-bg">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
